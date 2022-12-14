@@ -4,8 +4,6 @@ using UnityEngine.UI;
 public class Landscape : MonoBehaviour
 {
     private Material Material { get; set; }
-    [SerializeField] Vector2 dir;
-    [SerializeField] float speed;
 
     private void Awake()
     {
@@ -14,6 +12,6 @@ public class Landscape : MonoBehaviour
 
     private void Update()
     {
-        Material.mainTextureOffset = speed * Time.time * dir;
+        Material.mainTextureOffset = 0.1f * Time.time * new Vector2(0.3f, 0.6f);
     }
 }
