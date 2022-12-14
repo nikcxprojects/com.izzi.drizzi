@@ -321,7 +321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 135.69995, y: 51.660004}
+  m_AnchoredPosition: {x: 135.69995, y: 51.660034}
   m_SizeDelta: {x: 864, y: 192}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &152390461
@@ -388,7 +388,7 @@ RectTransform:
   m_GameObject: {fileID: 246458255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35242, y: 0.35242, z: 0.35242}
+  m_LocalScale: {x: 0.24084032, y: 0.24084032, z: 0.24084032}
   m_Children:
   - {fileID: 1834218671}
   - {fileID: 1093168472}
@@ -399,7 +399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -134.1, y: -35.9}
+  m_AnchoredPosition: {x: -145, y: -15}
   m_SizeDelta: {x: 366.86, y: 360.53}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &246458257
@@ -421,17 +421,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 5000
-      inSlope: -4920
-      outSlope: -4920
+      inSlope: -4999
+      outSlope: -4999
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 80
-      inSlope: -4920
-      outSlope: -4920
+      value: 1
+      inSlope: -4999
+      outSlope: -4999
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -1845,7 +1845,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1235127957}
-  - component: {fileID: 1235127958}
   m_Layer: 0
   m_Name: wheel game
   m_TagString: Untagged
@@ -1879,43 +1878,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1235127958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235127956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1c36954caf84a6488654179edc297e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pullBtn: {fileID: 0}
-  speedCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 5000
-      inSlope: -4920
-      outSlope: -4920
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 80
-      inSlope: -4920
-      outSlope: -4920
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1248170161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,7 +2299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 133.62997, y: -237.02}
+  m_AnchoredPosition: {x: 133.63, y: -237.02002}
   m_SizeDelta: {x: 669, y: 642}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1297088874
@@ -2520,7 +2482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 135.7, y: 108.6}
+  m_AnchoredPosition: {x: 135.69995, y: 108.599976}
   m_SizeDelta: {x: 864, y: 192}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1419880919
