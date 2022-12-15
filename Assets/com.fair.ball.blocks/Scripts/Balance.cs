@@ -20,6 +20,12 @@ public class Balance : MonoBehaviour
             textComponent.text = $"{Count}";
         };
 
+        Manager.OnEndRolling += (value) =>
+        {
+            Count += value;
+            textComponent.text = $"{Count}";
+        };
+
         textComponent.text = $"{Count}";
     }
 }
