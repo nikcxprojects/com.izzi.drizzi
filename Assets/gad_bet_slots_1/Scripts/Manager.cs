@@ -33,9 +33,6 @@ public class Manager : MonoBehaviour
     [SerializeField] GameObject statusAtoSpinGO;
 
     [Space(10)]
-    [SerializeField] GameObject warningGO;
-
-    [Space(10)]
     [SerializeField] Transform winlineParent;
     [SerializeField] GameObject[] winLinePrefabs;
 
@@ -52,7 +49,6 @@ public class Manager : MonoBehaviour
         };
 
         ChangeBet(0);
-        UpdateCoinsCount(gameInfo.balance);
     }
 
     private void Update()
@@ -93,7 +89,7 @@ public class Manager : MonoBehaviour
             result = GetReelData()
         };
 
-        UpdateCoinsCount(rollInfo.balance);
+        winText.text = $"{0}";
         SlotMachine.Instance.Pull(rollInfo.result);
     }
 
@@ -160,12 +156,6 @@ public class Manager : MonoBehaviour
     {
         SlotMachine.autoSpin = !SlotMachine.autoSpin;
         statusAtoSpinGO.SetActive(SlotMachine.autoSpin);
-    }
-
-    public void UpdateCoinsCount(int amount)
-    {
-        gameInfo.balance = amount;
-        OnEndRolling?.Invoke(Random.Range(0, 25));
     }
 
     public void SetMaxBet()

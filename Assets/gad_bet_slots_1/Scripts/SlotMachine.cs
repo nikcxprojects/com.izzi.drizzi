@@ -116,6 +116,8 @@ public class SlotMachine : MonoBehaviour
 
         spinBtn.interactable = !autoSpin;
         spinSource.Stop();
+
+        Manager.OnEndRolling?.Invoke(UnityEngine.Random.Range(0, 100));
     }
 
     [Serializable]
