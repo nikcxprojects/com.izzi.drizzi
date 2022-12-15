@@ -19,5 +19,7 @@ public class Balance : MonoBehaviour
             Count += value;
             textComponent.text = $"{Count}";
         };
+
+        textComponent.text = $"{Count}";
     }
 }
