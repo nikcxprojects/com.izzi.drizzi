@@ -120,6 +120,11 @@ public class SlotMachine : MonoBehaviour
 
         Manager.OnEndRolling?.Invoke(UnityEngine.Random.Range(0, 100));
         FindObjectOfType<UIManager>().BackStatus(true);
+
+        if(VibraOption.IsEnable)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     [Serializable]

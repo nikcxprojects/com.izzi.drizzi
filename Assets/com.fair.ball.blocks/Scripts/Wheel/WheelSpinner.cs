@@ -38,5 +38,9 @@ public class WheelSpinner : MonoBehaviour
 
         OnEndRolling?.Invoke(prize);
         FindObjectOfType<UIManager>().BackStatus(true);
+        if (VibraOption.IsEnable)
+        {
+            Handheld.Vibrate();
+        }
     }
 }
