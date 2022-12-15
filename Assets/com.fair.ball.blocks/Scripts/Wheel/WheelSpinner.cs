@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 using Random = UnityEngine.Random;
 
 public class WheelSpinner : MonoBehaviour
 {
+    public static Action<int> OnEndRolling { get; set; }
     private void Awake()
     {
         WheelMachine.OnHandlePulled += (angle) =>
@@ -32,6 +34,6 @@ public class WheelSpinner : MonoBehaviour
         transform.localRotation = Quaternion.Euler(Vector3.back * angle);
         int prize = (int)WheelMachine.OnWheelStopped?.Invoke(angle);
 
-        //GameManager.OnGameFinished?.Invoke(prize);
+        OnEndRolling?.Invoke(prize);
     }
 }
