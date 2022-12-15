@@ -5807,6 +5807,7 @@ GameObject:
   - component: {fileID: 1865890012}
   - component: {fileID: 1865890014}
   - component: {fileID: 1865890013}
+  - component: {fileID: 1865890015}
   m_Layer: 0
   m_Name: Text (2)
   m_TagString: Untagged
@@ -5875,6 +5876,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865890011}
   m_CullTransparentMesh: 1
+--- !u!114 &1865890015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865890011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5e85c5f4f38c042a997c6f3cd6a0c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1867517204
 GameObject:
   m_ObjectHideFlags: 0
@@ -6165,7 +6178,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1988911431}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7826523709594930732}
+        m_TargetAssemblyTypeName: Manager, Assembly-CSharp
+        m_MethodName: SetLine
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1988911431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6285,7 +6310,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2001463134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7826523709594930732}
+        m_TargetAssemblyTypeName: Manager, Assembly-CSharp
+        m_MethodName: SetLine
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2001463134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8774,7 +8811,6 @@ MonoBehaviour:
   totalBetWin: {fileID: 7826523709125973404}
   winText: {fileID: 7826523708902673079}
   statusAtoSpinGO: {fileID: 7826523708658131349}
-  warningGO: {fileID: 0}
   winlineParent: {fileID: 579484864}
   winLinePrefabs:
   - {fileID: 4297695759827360764, guid: 9a68fc087d10fb242aab877a2ac896fa, type: 3}

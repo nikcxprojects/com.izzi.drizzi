@@ -40,6 +40,7 @@ public class Manager : MonoBehaviour
     RollInfo rollInfo;
 
     public static Action<int> OnEndRolling { get; set; }
+    public static Action<int> OnSetLine { get; set; }
 
     private void Start()
     {
@@ -91,6 +92,11 @@ public class Manager : MonoBehaviour
 
         winText.text = $"{0}";
         SlotMachine.Instance.Pull(rollInfo.result);
+    }
+
+    public void SetLine(int line)
+    {
+        OnSetLine?.Invoke(line);
     }
 
     ReelData[] GetReelData()
