@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -41,5 +42,10 @@ public class UIManager : MonoBehaviour
 
         diceGo.SetActive(true);
         backBtnGo.SetActive(false);
+    }
+
+    public void BackStatus(bool enable)
+    {
+        backBtnGo.GetComponent<Button>().interactable = enable;
     }
 }

@@ -17,6 +17,8 @@ public class WheelSpinner : MonoBehaviour
 
     IEnumerator RotateMe(float angle)
     {
+        FindObjectOfType<UIManager>().BackStatus(false);
+
         int fullCycleCount = Random.Range(5, 15);
         float elDistance = 0.0f;
         float totalDistance = 360.0f * fullCycleCount + angle;
@@ -35,5 +37,6 @@ public class WheelSpinner : MonoBehaviour
         int prize = (int)WheelMachine.OnWheelStopped?.Invoke(angle);
 
         OnEndRolling?.Invoke(prize);
+        FindObjectOfType<UIManager>().BackStatus(true);
     }
 }

@@ -95,6 +95,7 @@ public class SlotMachine : MonoBehaviour
     {
         spinSource.Play();
         spinBtn.interactable = autoSpin && false;
+        FindObjectOfType<UIManager>().BackStatus(false);
 
         float elDistance = 0.0f;
         float totalDistance = maxCycle * width;
@@ -118,6 +119,7 @@ public class SlotMachine : MonoBehaviour
         spinSource.Stop();
 
         Manager.OnEndRolling?.Invoke(UnityEngine.Random.Range(0, 100));
+        FindObjectOfType<UIManager>().BackStatus(true);
     }
 
     [Serializable]
