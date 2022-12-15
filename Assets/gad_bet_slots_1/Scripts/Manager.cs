@@ -97,6 +97,7 @@ public class Manager : MonoBehaviour
     public void SetLine(int line)
     {
         OnSetLine?.Invoke(line);
+        totalBetWin.text = $"{line * gameInfo.bids[idBet]}";
     }
 
     ReelData[] GetReelData()
@@ -182,6 +183,7 @@ public class Manager : MonoBehaviour
             idBet = 0;
         }
 
+        totalBetWin.text = $"{gameInfo.bids[idBet]}";
         totalBet = gameInfo.bids[idBet];
         betText.text = $"{totalBet}";
     }
