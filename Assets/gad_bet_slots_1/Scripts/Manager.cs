@@ -163,7 +163,7 @@ public class Manager : MonoBehaviour
     public void UpdateCoinsCount(int amount)
     {
         gameInfo.balance = amount;
-        winText.text = gameInfo.balance > 0 ? gameInfo.balance.ToString("WIN: ##,# $", CultureInfo.CurrentCulture) : $"WIN: {0} $";
+        winText.text = gameInfo.balance > 0 ? $"{gameInfo.balance}" : $"{0}";
     }
 
     public void SetMaxBet()
@@ -185,7 +185,7 @@ public class Manager : MonoBehaviour
         }
 
         totalBet = gameInfo.bids[idBet];
-        betText.text = totalBet.ToString("BET: ##,# $", CultureInfo.CurrentCulture);
+        betText.text = $"{totalBet}";
     }
 
     [Serializable]
