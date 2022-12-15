@@ -42,6 +42,8 @@ public class Manager : MonoBehaviour
     GameInfo gameInfo;
     RollInfo rollInfo;
 
+    public static Action<int> OnEndRolling { get; set; }
+
     private void Start()
     {
         gameInfo = new GameInfo
@@ -86,7 +88,7 @@ public class Manager : MonoBehaviour
         {
             win = true,
             win_amount = 100,
-            balance = gameInfo.balance + 100,
+            balance = gameInfo.balance + 0,
             winlines = new int[] { 1 },
             result = GetReelData()
         };
@@ -163,7 +165,7 @@ public class Manager : MonoBehaviour
     public void UpdateCoinsCount(int amount)
     {
         gameInfo.balance = amount;
-        winText.text = gameInfo.balance > 0 ? $"{gameInfo.balance}" : $"{0}";
+        OnEndRolling?.Invoke(Random.Range(0, 25));
     }
 
     public void SetMaxBet()
