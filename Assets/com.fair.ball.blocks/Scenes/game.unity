@@ -6445,7 +6445,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7826523709594930732}
         m_TargetAssemblyTypeName: Manager, Assembly-CSharp
         m_MethodName: TrySpin
         m_Mode: 1
@@ -6940,7 +6940,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7826523709594930732}
         m_TargetAssemblyTypeName: Manager, Assembly-CSharp
         m_MethodName: SetAutoSpin
         m_Mode: 1
@@ -7691,6 +7691,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7826523709594930730}
+  - component: {fileID: 7826523709594930732}
   m_Layer: 0
   m_Name: slots game
   m_TagString: Untagged
@@ -7698,6 +7699,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7826523709594930732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7826523709594930731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e46b9c8fc547f346bc1100d323f5fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  betText: {fileID: 7826523709759116038}
+  totalBetWin: {fileID: 7826523709125973404}
+  winText: {fileID: 7826523708902673079}
+  statusAtoSpinGO: {fileID: 7826523708658131349}
+  warningGO: {fileID: 0}
+  winlineParent: {fileID: 579484864}
+  winLinePrefabs:
+  - {fileID: 4297695759827360764, guid: 9a68fc087d10fb242aab877a2ac896fa, type: 3}
+  - {fileID: 3571538734690370807, guid: e6e24f908f536ab4984169f7fc28fa95, type: 3}
+  - {fileID: 1695856836748395885, guid: e90848b976165cb4d8095e86a8b3a745, type: 3}
 --- !u!222 &7826523709595974434
 CanvasRenderer:
   m_ObjectHideFlags: 0
