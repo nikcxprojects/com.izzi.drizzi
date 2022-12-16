@@ -22,7 +22,7 @@ public class Manager : MonoBehaviour
 
     bool trySpin;
 
-    int idBet;
+    int betCount;
     int totalBet;
 
     [SerializeField] Text betText;
@@ -97,7 +97,7 @@ public class Manager : MonoBehaviour
     public void SetLine(int line)
     {
         OnSetLine?.Invoke(line);
-        totalBetWin.text = $"{line * gameInfo.bids[idBet]}";
+        totalBetWin.text = $"{line * betCount}";
     }
 
     ReelData[] GetReelData()
@@ -167,24 +167,20 @@ public class Manager : MonoBehaviour
 
     public void SetMaxBet()
     {
-        idBet = gameInfo.bids.Length - 1;
+        betCount = 500;
         ChangeBet(0);
     }
 
     public void ChangeBet(int dir)
     {
-        idBet += dir;
-        if(idBet > gameInfo.bids.Length - 1)
+        betCount += dir;
+        if(betCount<0)
         {
-            idBet = gameInfo.bids.Length - 1;
-        }
-        else if(idBet < 0)
-        {
-            idBet = 0;
+            betCount = 0;
         }
 
-        totalBetWin.text = $"{gameInfo.bids[idBet]}";
-        totalBet = gameInfo.bids[idBet];
+        totalBetWin.text = $"{betCount}";
+        totalBet = betCount;
         betText.text = $"{totalBet}";
     }
 
